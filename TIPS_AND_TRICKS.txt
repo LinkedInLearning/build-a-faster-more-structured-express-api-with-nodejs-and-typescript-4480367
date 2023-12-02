@@ -1,0 +1,26 @@
+Types in Express Functions:
+- Define the type only when returning an object in the function
+
+MongoDB:
+- Mongo URI: create a "dummy" user and password for the URI (Do not use your own password and information)
+  - Under "Database Access" and a new user:
+    - user: testuser1
+    - pw: test
+- no need to install @types/mongoose (comes with its own types)
+- Under "Network Access": Be sure to set IP address to "Allow access from anywhere" (0.0.0.0/0)
+
+Render:
+- Set NODE_VERSION environment variable
+- root directory is ./build because this is compiled to JS
+- build script should be "npm install && tsc" in package.json
+- build script in Render should be "npm ci; npm run build"
+- start script in Render is yarn start
+
+Official Docs:
+- MongoDB: https://www.mongodb.com/docs/manual/core/document/
+- Mongoose: https://mongoosejs.com/docs/
+- TypeScript: https://www.typescriptlang.org/docs/
+- Express: https://expressjs.com/
+- Render: https://render.com/docs
+- Node: https://nodejs.org/en/docs/guides
+- Jest: https://jestjs.io/docs/getting-started
