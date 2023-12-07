@@ -33,17 +33,6 @@ app.get("/item/all", async (req: Request, res: Response): Promise<void> => {
   }
 });
 
-app.get("/item/:id", async (req: Request, res: Response): Promise<void> => {
-  const { id } = req.params
-  try {
-    const singleItem = await db.collection('posts').find({ _id: new ObjectId(id) }).toArray()
-    res.json({ result: singleItem })
-  } catch (x) {
-    console.error(x);
-    res.json({ error: x });
-  }
-});
-
 app.listen(process.env.PORT || PORT, (): void => {
   console.log("And we're rolling! 🎥");
 });
